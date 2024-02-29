@@ -1,0 +1,40 @@
+.containerG{
+    height: 200px;
+    width: 100px;
+    border: 1px solid rgb(40, 200, 240);
+    padding: 1em;
+    display: grid;
+    grid-template-areas:
+     "images images contact contact contact contact"
+     "images images contact contact contact contact"
+     "languages languages education education education education"
+     "languages languages education education education education"
+     "skills skills interests interests interests interests"
+     "skills skills interests interests interests interests";
+}
+.centerFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cell {
+    border: 1px solid teal;
+}
+.imagesG {
+    grid-area: 1;
+}
+.contactG {
+    grid-area: 2 ;
+}
+.languagesG{
+    grid-area: 3;
+}
+.educationG{
+    grid-area:4 ;
+}
+.skillsG{
+    grid-area: 5;
+}
+.interestsG{
+    grid-area: 6;
+}
