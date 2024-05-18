@@ -1,40 +1,89 @@
-.containerG{
-    height: 200px;
-    width: 100px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.containerG {
+    width: 80%;
+    max-width: 1000px;
     border: 1px solid rgb(40, 200, 240);
     padding: 1em;
     display: grid;
     grid-template-areas:
-     "images images contact contact contact contact"
-     "images images contact contact contact contact"
-     "languages languages education education education education"
-     "languages languages education education education education"
-     "skills skills interests interests interests interests"
-     "skills skills interests interests interests interests";
+        "images contact contact contact contact contact"
+        "languages education education education education education"
+        "skills interests interests interests interests interests";
+    gap: 1em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.centerFlex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 .cell {
-    border: 1px solid teal;
+    padding: 1em;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
 }
+
+.cell:hover {
+    transform: scale(1.05);
+}
+
 .imagesG {
-    grid-area: 1;
+    grid-area: images;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .contactG {
-    grid-area: 2 ;
+    grid-area: contact;
 }
-.languagesG{
-    grid-area: 3;
+
+.languagesG {
+    grid-area: languages;
 }
-.educationG{
-    grid-area:4 ;
+
+.educationG {
+    grid-area: education;
 }
-.skillsG{
-    grid-area: 5;
+
+.skillsG {
+    grid-area: skills;
 }
-.interestsG{
-    grid-area: 6;
+
+.interestsG {
+    grid-area: interests;
+}
+
+h2 {
+    color: rgb(40, 200, 240);
+    margin-bottom: 0.5em;
+}
+
+ul, ol {
+    padding-left: 1.2em;
+}
+
+ul li, ol li {
+    margin-bottom: 0.5em;
+}
+
+@media (max-width: 768px) {
+    .containerG {
+        grid-template-areas:
+            "images"
+            "contact"
+            "languages"
+            "education"
+            "skills"
+            "interests";
+    }
 }
